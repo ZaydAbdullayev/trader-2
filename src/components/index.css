@@ -1,0 +1,98 @@
+.filter-container {
+  padding: 20px;
+  border-radius: 22px;
+  margin-bottom: 24px;
+  color: #e4e4e4;
+}
+
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  i {
+    flex: 1;
+  }
+}
+
+.filter-input {
+  background: #1e2128;
+  border: 1px solid #2a2a2a;
+  color: #ccc;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  max-width: 500px;
+  flex: 1;
+  transition: border 0.2s ease;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.switch-label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background-color: #d17df8;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch-input:checked + .switch-label::after {
+  transform: translateX(20px);
+}
+
+.switch-label-text {
+  position: absolute;
+  top: -80%;
+  font-size: 13px;
+  margin-left: -11px;
+  color: #9635e6;
+}
+
+.options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.options button {
+  background: #1e2128;
+  border: 1px solid #2a2a2a;
+  color: #aaa;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.options button:hover,
+.options button.active {
+  background-color: #2e3138;
+  color: #9635e6;
+  border-color: #9635e6;
+}
